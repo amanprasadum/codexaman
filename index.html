@@ -1,1 +1,268 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Codexaman — Coming Soon</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html, body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+  body {
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(to right, rgba(15,23,42,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15,23,42,0.05) 1px, transparent 1px),
+      radial-gradient(circle at 85% 15%, rgba(16,185,129,0.14), transparent 45%),
+      radial-gradient(circle at 10% 85%, rgba(16,185,129,0.10), transparent 45%);
+    background-size: 42px 42px, 42px 42px, 100% 100%, 100% 100%;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 2px;
+    margin-left: 2px;
+    background-color: currentColor;
+    animation: blink 1s step-start infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .fade-up { animation: fadeUp 0.7s ease-out both; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cursor { animation: none; }
+    .fade-up { animation: none; }
+  }
+</style>
+</head>
+<body class="text-slate-900 flex flex-col lg:h-screen lg:overflow-hidden">
+
+  <!-- Header -->
+  <header class="w-full px-6 sm:px-10 py-4 flex items-center justify-between shrink-0">
+    <span class="text-lg font-extrabold tracking-tight">
+      codex<span class="text-emerald-500">aman</span>
+    </span>
+    <span class="hidden sm:inline text-sm text-slate-500">Howrah, Kolkata</span>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 flex items-center px-6 sm:px-10 lg:overflow-hidden">
+    <div class="w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center fade-up">
+
+      <!-- Left: brand -->
+      <div class="text-center lg:text-left">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-200 bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          COMING SOON
+        </span>
+
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-3 leading-tight">
+          codexaman<span class="text-emerald-500">.in</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 mb-2">
+          Freelance <span id="typewriter" class="font-semibold text-slate-900"></span><span class="cursor text-slate-900">&nbsp;</span>
+        </p>
+
+        <p class="text-sm text-slate-500 max-w-md mx-auto lg:mx-0 mb-6">
+          Web design, web development, Android apps, data analytics and ERP builds — by Aman Prasad, working under the name Codexaman.
+        </p>
+
+        <!-- Countdown -->
+        <div class="inline-flex items-center gap-4 bg-white/80 border border-slate-200 rounded-xl px-5 py-3 mb-6 shadow-sm">
+          <span class="text-xs text-slate-500 leading-tight">Open for new<br>projects — closing in</span>
+          <div id="countdown" class="flex items-center gap-2 font-mono text-xl font-bold text-emerald-600">
+            <span id="cd-hours">24</span><span class="text-slate-300 text-base">:</span><span id="cd-minutes">00</span><span class="text-slate-300 text-base">:</span><span id="cd-seconds">00</span>
+          </div>
+        </div>
+
+        <!-- Contact + socials -->
+        <div class="flex flex-wrap justify-center lg:justify-start items-center gap-4 text-sm text-slate-600">
+          <a href="tel:+918420966418" class="hover:text-emerald-600 transition-colors">+91 84209 66418</a>
+          <span class="text-slate-300">•</span>
+          <a href="mailto:icodexaman@gmail.com" class="hover:text-emerald-600 transition-colors">icodexaman@gmail.com</a>
+        </div>
+
+        <div class="flex justify-center lg:justify-start items-center gap-3 mt-4">
+          <a href="https://wa.me/918420966418" target="_blank" rel="noopener"
+             class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 hover:text-emerald-600 hover:border-emerald-300 transition-colors" title="WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+              <path d="M20.52 3.48A11.86 11.86 0 0012.03 0C5.5 0 .2 5.3.2 11.83c0 2.08.55 4.1 1.6 5.89L0 24l6.44-1.69a11.9 11.9 0 005.58 1.42h.01c6.53 0 11.83-5.3 11.83-11.83 0-3.16-1.23-6.13-3.34-8.42zM12.03 21.4h-.01a9.6 9.6 0 01-4.9-1.34l-.35-.21-3.62.95.97-3.53-.23-.36a9.58 9.58 0 01-1.47-5.08c0-5.3 4.32-9.62 9.63-9.62a9.56 9.56 0 016.8 2.82 9.56 9.56 0 012.82 6.8c0 5.3-4.32 9.57-9.64 9.57zm5.27-7.19c-.29-.15-1.71-.84-1.98-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.57-.89-2.15-.23-.56-.47-.48-.65-.49-.17-.01-.36-.01-.55-.01-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.03.15.19 2.06 3.15 5 4.42.7.3 1.24.48 1.67.61.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com/codexaman.in" target="_blank" rel="noopener"
+             class="w-9 h-9 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 hover:text-emerald-600 hover:border-emerald-300 transition-colors" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+              <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 01-1.38-.9 3.72 3.72 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zm0-2.16C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39A5.9 5.9 0 00.62 4.14C.32 4.9.12 5.78.06 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 00-1.39-2.13A5.9 5.9 0 0019.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1012 18.16 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1112 8a4 4 0 010 8zm6.4-10.4a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: contact form -->
+      <div class="bg-white border border-slate-200 rounded-2xl shadow-sm px-6 py-6 sm:px-8 sm:py-8">
+        <h2 class="text-lg font-bold text-slate-900 mb-1">Get in touch</h2>
+        <p class="text-sm text-slate-500 mb-5">Tell me about your project — I'll get back to you within 24 hours.</p>
+
+        <form id="contactForm" class="flex flex-col gap-3.5">
+          <input type="hidden" name="access_key" value="cf185d87-1b86-4377-88d6-6ff2e0fce031">
+
+          <div>
+            <label for="name" class="block text-xs font-medium text-slate-600 mb-1">Name</label>
+            <input type="text" id="name" name="name" required
+              class="w-full px-3 py-2.5 rounded-lg border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors">
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-medium text-slate-600 mb-1">Email</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-3 py-2.5 rounded-lg border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors">
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-medium text-slate-600 mb-1">Project details</label>
+            <textarea id="message" name="message" rows="3" required
+              class="w-full px-3 py-2.5 rounded-lg border border-slate-300 bg-white text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn"
+            class="mt-1 w-full py-2.5 rounded-lg bg-emerald-600 text-white text-sm font-semibold hover:bg-emerald-700 transition-colors">
+            Send message
+          </button>
+
+          <p id="formStatus" class="text-xs text-center hidden"></p>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full px-6 py-3 text-center text-xs text-slate-400 shrink-0">
+    © 2026 Codexaman (Aman Prasad) · Howrah, Kolkata · codexaman.in
+  </footer>
+
+  <script>
+    // Typewriter
+    const roles = [
+      "Web Designer",
+      "Web Developer",
+      "Android App Developer",
+      "Data Analyst",
+      "ERP Developer"
+    ];
+    const el = document.getElementById('typewriter');
+    let roleIndex = 0, charIndex = 0, deleting = false;
+
+    function tick() {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1400);
+          return;
+        }
+      } else {
+        charIndex--;
+        el.textContent = current.slice(0, charIndex);
+        if (charIndex === 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+        }
+      }
+      setTimeout(tick, deleting ? 45 : 90);
+    }
+    tick();
+
+    // 24-hour countdown
+    const deadline = new Date().getTime() + 24 * 60 * 60 * 1000;
+    const hoursEl = document.getElementById('cd-hours');
+    const minutesEl = document.getElementById('cd-minutes');
+    const secondsEl = document.getElementById('cd-seconds');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = deadline - now;
+      if (distance <= 0) {
+        hoursEl.textContent = '00'; minutesEl.textContent = '00'; secondsEl.textContent = '00';
+        return;
+      }
+      const hours = Math.floor(distance / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      hoursEl.textContent = pad(hours);
+      minutesEl.textContent = pad(minutes);
+      secondsEl.textContent = pad(seconds);
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Contact form submission (Web3Forms)
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formStatus = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formStatus.classList.add('hidden');
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+
+        formStatus.classList.remove('hidden');
+        if (result.success) {
+          formStatus.textContent = "Thanks! Your message is in — I'll reply within 24 hours.";
+          formStatus.className = "text-xs text-center text-emerald-600";
+          form.reset();
+        } else {
+          formStatus.textContent = "Something went wrong. Please try emailing me directly.";
+          formStatus.className = "text-xs text-center text-red-500";
+        }
+      } catch (err) {
+        formStatus.classList.remove('hidden');
+        formStatus.textContent = "Network error. Please try emailing me directly.";
+        formStatus.className = "text-xs text-center text-red-500";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      }
+    });
+  </script>
+
+</body>
+</html>
