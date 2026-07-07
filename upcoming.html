@@ -1,0 +1,2847 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>codexaman — Freelance Web Developer in Kolkata, India</title>
+  <meta name="description"
+    content="codexaman is Aman Prasad, a freelance web developer based in Kolkata, India. I build fast, modern websites and web apps for small businesses worldwide — WordPress, Laravel, React, Shopify, MERN, Firebase, WooCommerce." />
+  <meta name="keywords"
+    content="freelance web developer India, web developer Kolkata, hire web developer Kolkata, WordPress developer India, Laravel developer Kolkata, React developer India, MERN stack developer, Firebase developer, affordable website India, codexaman, codexaman.in, small business website India" />
+  <meta name="author" content="codexaman" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://codexaman.in/" />
+  <meta property="og:title" content="codexaman — Freelance Web Developer in Kolkata, India" />
+  <meta property="og:description"
+    content="Aman Prasad — a freelance web developer from Kolkata, India. I build modern, affordable websites and web apps for small businesses worldwide." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codexaman.in/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aman Prasad",
+    "alternateName": "codexaman",
+    "url": "https://codexaman.in",
+    "description": "Freelance web developer based in Kolkata, India.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kolkata", "addressRegion": "West Bengal", "addressCountry": "IN" },
+    "knowsAbout": ["Web Development", "WordPress", "Elementor", "Laravel", "PHP", "Tailwind CSS", "WooCommerce", "Shopify", "React", "Flutter", "MERN", "MEAN", "Firebase", "Supabase"]
+  }
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <style>
+    :root {
+      --accent: #6c63ff;
+      --accent-dark: #5148cc;
+      --accent-light: #ededfc;
+      --accent-rgb: 108, 99, 255;
+      --dark: #18181b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fff;
+      color: var(--dark);
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ============ NAVBAR ============ */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1050;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      padding: 12px 0;
+    }
+
+    #navbar.scrolled {
+      border-color: #f4f4f5;
+      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-offset {
+      height: 60px;
+    }
+
+    .nav-link-custom {
+      position: relative;
+      font-size: 0.875rem;
+      color: #71717a !important;
+      padding: 8px 12px !important;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+
+    .nav-link-custom:hover {
+      color: var(--dark) !important;
+      background: #f4f4f5;
+    }
+
+    .nav-link-custom::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 12px;
+      right: 12px;
+      height: 1.5px;
+      background: var(--accent);
+      width: 0;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link-custom:hover::after {
+      width: calc(100% - 24px);
+    }
+
+    .nav-cta {
+      position: relative;
+      overflow: hidden;
+      background: var(--accent);
+      color: #fff !important;
+      border-radius: 8px;
+      padding: 8px 18px !important;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
+    }
+
+    .nav-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+      transition: left 0.45s ease;
+    }
+
+    .nav-cta:hover::before {
+      left: 160%;
+    }
+
+    @property --glow-angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
+    @keyframes glow-rotate {
+      0% {
+        --glow-angle: 0deg;
+      }
+
+      100% {
+        --glow-angle: 360deg;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 12px;
+      padding: 10px 18px;
+      background: #fff;
+      position: relative;
+      isolation: isolate;
+      font-size: 0.8rem;
+      color: #52525b;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 13px;
+      background: conic-gradient(from var(--glow-angle), transparent 55%, rgba(108, 99, 255, 0.6) 75%, rgba(167, 139, 250, 0.9) 85%, rgba(108, 99, 255, 0.6) 95%, transparent 100%);
+      animation: glow-rotate 4s linear infinite;
+      z-index: -1;
+    }
+
+    .hero-badge::after {
+      content: '';
+      position: absolute;
+      inset: 1px;
+      border-radius: 12px;
+      background: #fff;
+      z-index: -1;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+      animation: badge-pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes badge-pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.08);
+      }
+    }
+
+    .badge-divider {
+      width: 1px;
+      height: 14px;
+      background: #e4e4e7;
+    }
+
+    .badge-tech {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: rgba(108, 99, 255, 0.08);
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #6c63ff 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .typewriter-line {
+      display: inline-block;
+      min-height: 1.2em;
+      line-height: 1.2;
+    }
+
+    .typewriter-text {
+      border-right: 2px solid var(--accent);
+      padding-right: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: blink-cursor 0.75s step-end infinite;
+    }
+
+    @keyframes blink-cursor {
+
+      0%,
+      100% {
+        border-color: var(--accent);
+      }
+
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .hero-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #0e0e12;
+      min-height: 340px;
+      border: 1px solid #e4e4e7;
+    }
+
+    #heroCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .hero-url {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 3px 16px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.5);
+      max-width: 200px;
+    }
+
+    .hero-fade-out {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 0%, transparent 60%, #fff 100%);
+      pointer-events: none;
+      border-radius: 14px;
+    }
+
+    .tech-pill {
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+
+    .tech-grid-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #e4e4e7;
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: #fff;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #52525b;
+      transition: border-color 0.3s, color 0.3s, transform 0.25s;
+      cursor: default;
+    }
+
+    .tech-grid-item:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .glow-card {
+      position: relative;
+      border-radius: 14px;
+      background: #fff;
+      isolation: isolate;
+    }
+
+    .glow-card::before {
+      content: '';
+      position: absolute;
+      inset: -1.5px;
+      border-radius: 15px;
+      background: conic-gradient(from var(--glow-angle), transparent 60%, rgba(108, 99, 255, 0.7) 80%, rgba(167, 139, 250, 0.9) 88%, rgba(108, 99, 255, 0.7) 96%, transparent 100%);
+      animation: glow-rotate 3s linear infinite;
+      z-index: -1;
+    }
+
+    .glow-card::after {
+      content: '';
+      position: absolute;
+      inset: 1px;
+      border-radius: 13px;
+      background: #fff;
+      z-index: -1;
+    }
+
+    .glow-card:nth-child(2)::before {
+      animation-delay: -1s;
+    }
+
+    .glow-card:nth-child(3)::before {
+      animation-delay: -2s;
+    }
+
+    .card-static {
+      border: 1px solid #e4e4e7;
+      border-radius: 14px;
+    }
+
+    .btn-primary-cx {
+      position: relative;
+      overflow: hidden;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 28px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      border: none;
+    }
+
+    .btn-primary-cx:hover {
+      background: var(--accent-dark);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(108, 99, 255, 0.38);
+    }
+
+    .btn-primary-cx::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.45s ease;
+    }
+
+    .btn-primary-cx:hover::before {
+      left: 160%;
+    }
+
+    .btn-secondary-cx {
+      position: relative;
+      border: 1.5px solid #e4e4e7;
+      color: #52525b;
+      border-radius: 10px;
+      padding: 11px 28px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: inline-block;
+      text-decoration: none;
+      transition: border-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.25s;
+      background: transparent;
+    }
+
+    .btn-secondary-cx:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(108, 99, 255, 0.1);
+    }
+
+    .btn-dark-cx {
+      position: relative;
+      overflow: hidden;
+      background: #18181b;
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 28px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: inline-block;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      border: none;
+    }
+
+    .btn-dark-cx:hover {
+      background: #27272a;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-dark-cx::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+      transition: left 0.45s ease;
+    }
+
+    .btn-dark-cx:hover::before {
+      left: 160%;
+    }
+
+    .feature-dark-card {
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      background: var(--dark);
+      min-height: 288px;
+      border: 1px solid #27272a;
+      transition: border-color 0.35s, box-shadow 0.35s;
+    }
+
+    .feature-dark-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.07);
+    }
+
+    .feature-dark-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--dark), rgba(24, 24, 27, 0.7), rgba(24, 24, 27, 0.4));
+    }
+
+    .feature-dark-dots {
+      position: absolute;
+      inset: 0;
+      opacity: 0.1;
+      background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+
+    .accent-card-cx {
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 14px;
+      padding: 28px;
+      transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s;
+    }
+
+    .accent-card-cx:hover {
+      border-color: #a78bfa;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .stat-bar {
+      border: 1px solid #e4e4e7;
+      border-radius: 14px;
+      transition: border-color 0.4s;
+    }
+
+    .stat-bar:hover {
+      border-color: rgba(108, 99, 255, 0.2);
+    }
+
+    .portfolio-wrap {
+      background: #0e0e12;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #27272a;
+    }
+
+    .portfolio-slider-track {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .portfolio-slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .portfolio-video {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(14, 14, 18, 0.95) 0%, rgba(14, 14, 18, 0.3) 60%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 28px;
+    }
+
+    .portfolio-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      border: none;
+      padding: 0;
+    }
+
+    .portfolio-dot.active {
+      background: #fff;
+      transform: scale(1.3);
+    }
+
+    .slider-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, border-color 0.2s;
+      backdrop-filter: blur(8px);
+    }
+
+    .slider-btn:hover {
+      background: rgba(108, 99, 255, 0.4);
+      border-color: rgba(108, 99, 255, 0.6);
+    }
+
+    .process-card {
+      border-radius: 14px;
+      border: 1px solid #e4e4e7;
+      background: #fff;
+      padding: 24px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .process-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.07), 0 8px 28px rgba(108, 99, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .process-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(108, 99, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .bento-card {
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .bento-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 36px rgba(108, 99, 255, 0.1);
+    }
+
+    .bento-dark {
+      background: var(--dark);
+      border: 1px solid #27272a;
+    }
+
+    .bento-light {
+      background: #fff;
+      border: 1px solid #e4e4e7;
+    }
+
+    .bento-gray {
+      background: #f9f9f9;
+      border: 1px solid #e4e4e7;
+    }
+
+    .bento-accent-grad {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      border: 1px solid var(--accent);
+    }
+
+    /* ============ FAQ ACCORDION — FIXED ============ */
+    .accord-wrap {
+      border: 1px solid #e4e4e7;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .accord-item {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .accord-item:last-child {
+      border-bottom: none;
+    }
+
+    .accord-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      cursor: pointer;
+      list-style: none;
+      transition: background 0.2s;
+      user-select: none;
+    }
+
+    .accord-summary:hover {
+      background: #fafafa;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .accord-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      border: 1px solid #e4e4e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.25s, border-color 0.25s, transform 0.3s;
+    }
+
+    details[open] .accord-icon {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: rotate(45deg);
+    }
+
+    details[open] .accord-icon svg {
+      stroke: #fff;
+    }
+
+    .accord-body {
+      padding: 0 22px 18px;
+    }
+
+    .accord-num {
+      width: 26px;
+      height: 26px;
+      border-radius: 7px;
+      background: rgba(108, 99, 255, 0.08);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .plan-card {
+      position: relative;
+      border-radius: 14px;
+      border: 1px solid #e4e4e7;
+      background: #fff;
+      padding: 28px 24px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .plan-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.07), 0 12px 36px rgba(108, 99, 255, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .plan-card.popular {
+      background: var(--dark);
+      border-color: #3a3a45;
+      color: #fff;
+    }
+
+    .plan-card.popular:hover {
+      border-color: #8b8bff;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .custom-variety-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .custom-variety-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(108, 99, 255, 0.07);
+      border: 1px solid rgba(108, 99, 255, 0.15);
+      border-radius: 8px;
+      padding: 7px 9px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .custom-plan-card {
+      border: 1px solid rgba(108, 99, 255, 0.25);
+      background: linear-gradient(135deg, #faf9ff 0%, #f4f3ff 100%);
+      border-radius: 14px;
+      padding: 28px 24px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .custom-plan-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.07), 0 12px 36px rgba(108, 99, 255, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .calendly-container {
+      overflow: hidden;
+      height: 580px;
+      background: #f9fafb;
+    }
+
+    .calendly-inline-widget {
+      width: 100% !important;
+      height: 580px !important;
+      min-width: unset !important;
+      border: none;
+      display: block;
+    }
+
+    .budget-option input:checked+label {
+      background: var(--dark);
+      color: #fff;
+      border-color: var(--dark);
+    }
+
+    .budget-label {
+      cursor: pointer;
+      border: 1px solid #e4e4e7;
+      color: #52525b;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      display: block;
+      user-select: none;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .budget-label:hover {
+      border-color: #a1a1aa;
+    }
+
+    /* ============ FOOTER VIDEO MASK ============ */
+    .footer-video-mask-wrap {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .footer-brand-video-container {
+  position: relative;
+  width: 100%;
+  height: clamp(160px, 28vw, 340px);
+  overflow: hidden;
+}
+
+.footer-brand-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-brand-mask-text {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  mix-blend-mode: screen;
+  font-size: clamp(4.5rem, 15vw, 12rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #000;
+  user-select: none;
+}
+
+    .section-tag {
+      border: 1px solid #e4e4e7;
+      border-radius: 100px;
+      padding: 5px 16px;
+      font-size: 0.75rem;
+      color: #71717a;
+      display: inline-block;
+    }
+
+    .text-accent {
+      color: var(--accent) !important;
+    }
+
+    .bg-dark-cx {
+      background: var(--dark) !important;
+    }
+
+    .rounded-14 {
+      border-radius: 14px !important;
+    }
+
+    .border-dark-cx {
+      border: 1px solid #27272a;
+    }
+
+    .include-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      border: 1px solid #bbf7d0;
+      background: #f0fdf4;
+      color: #15803d;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 576px) {
+      .portfolio-video {
+        height: 280px;
+      }
+    }
+
+    .cx-input:focus {
+      outline: none;
+      border-color: var(--accent) !important;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.12);
+    }
+
+    .cx-input {
+      border: 1px solid #e4e4e7;
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 0.875rem;
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .social-pill {
+      font-size: 0.75rem;
+      border: 1px solid #e4e4e7;
+      color: #52525b;
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: #fff;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .social-pill:hover {
+      border-color: rgba(108, 99, 255, 0.4);
+      color: var(--accent);
+    }
+
+    .wa-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      border: 1px solid #e4e4e7;
+      background: #fff;
+      color: #52525b;
+      padding: 6px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .wa-pill:hover {
+      border-color: #4ade80;
+      color: #15803d;
+    }
+
+    /* ============ TRAP VS CODEXAMAN SECTION ============ */
+    .trap-card {
+      border-radius: 14px;
+      border: 1px solid #fecaca;
+      background: #fff7f7;
+      padding: 26px 24px;
+      height: 100%;
+    }
+
+    .trap-card .trap-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: #b91c1c;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .trap-icon-x {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #fee2e2;
+      color: #dc2626;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .trap-list li {
+      font-size: 0.85rem;
+      color: #7f1d1d;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .win-card {
+      border-radius: 14px;
+      border: 1px solid var(--accent);
+      background: linear-gradient(135deg, #faf9ff 0%, #f4f3ff 100%);
+      padding: 26px 24px;
+      height: 100%;
+    }
+
+    .win-card .win-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .win-icon-check {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(108, 99, 255, 0.12);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .win-list li {
+      font-size: 0.85rem;
+      color: #3f3d56;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    /* ============ FAQ / INCLUDED — GRID CARDS (redesigned) ============ */
+    .included-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .included-card {
+      display: flex;
+      gap: 16px;
+      border: 1px solid #e4e4e7;
+      border-radius: 14px;
+      padding: 18px 20px;
+      background: #fff;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+
+    .included-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.07), 0 10px 30px rgba(108, 99, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .included-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(108, 99, 255, 0.08);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ============ CHATBOT ============ */
+    #cx-chat-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 20px rgba(108, 99, 255, 0.45);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    #cx-chat-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(108, 99, 255, 0.55);
+    }
+
+    #cx-chat-box {
+      position: fixed;
+      bottom: 92px;
+      right: 28px;
+      z-index: 9998;
+      width: 320px;
+      background: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    #cx-chat-box.open {
+      display: flex;
+    }
+
+    .cx-chat-header {
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cx-chat-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .cx-chat-status {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    .cx-chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 300px;
+      min-height: 200px;
+    }
+
+    .cx-msg {
+      max-width: 85%;
+      padding: 9px 13px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+    }
+
+    .cx-msg.bot {
+      background: #f4f4f5;
+      color: #18181b;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+    }
+
+    .cx-msg.user {
+      background: var(--accent);
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+    }
+
+    .cx-chat-quick {
+      padding: 8px 12px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .cx-quick-btn {
+      font-size: 0.72rem;
+      padding: 5px 10px;
+      border-radius: 20px;
+      border: 1px solid #e4e4e7;
+      background: #fff;
+      color: #52525b;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .cx-quick-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(108, 99, 255, 0.05);
+    }
+
+    .cx-chat-input-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px 12px;
+      border-top: 1px solid #f0f0f0;
+      margin-top: 8px;
+    }
+
+    #cx-chat-input {
+      flex: 1;
+      border: 1px solid #e4e4e7;
+      border-radius: 20px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    #cx-chat-input:focus {
+      border-color: var(--accent);
+    }
+
+    #cx-chat-send {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.2s;
+    }
+
+    #cx-chat-send:hover {
+      background: var(--accent-dark);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-offset"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="w-100">
+    <div class="container" style="max-width:1100px;">
+      <div class="d-flex align-items-center justify-content-between">
+        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">
+          <div class="d-flex align-items-center justify-content-center rounded-2"
+            style="width:28px;height:28px;background:var(--accent);">
+            <span class="text-white fw-black" style="font-size:0.7rem;font-weight:900;">cx</span>
+          </div>
+          <span class="fw-semibold" style="font-size:0.95rem;letter-spacing:-0.02em;">codexaman<span
+              class="text-accent">.in</span></span>
+        </a>
+        <div class="d-none d-md-flex align-items-center gap-1">
+          <a href="#portfolio" class="nav-link-custom">Work</a>
+          <a href="#services" class="nav-link-custom">Services</a>
+          <a href="#stack" class="nav-link-custom">Stack</a>
+          <a href="#pricing" class="nav-link-custom">Pricing</a>
+          <div style="width:1px;height:16px;background:#e4e4e7;margin:0 8px;"></div>
+          <a href="#book" class="nav-link-custom">Book a call</a>
+          <a href="#contact" class="nav-cta ms-1">Hire me</a>
+        </div>
+        <button class="d-md-none border-0 bg-transparent p-1" id="mobileToggle" aria-label="Menu">
+          <span
+            style="display:block;width:20px;height:2px;background:var(--dark);margin:4px 0;border-radius:2px;"></span>
+          <span
+            style="display:block;width:20px;height:2px;background:var(--dark);margin:4px 0;border-radius:2px;"></span>
+          <span
+            style="display:block;width:20px;height:2px;background:var(--dark);margin:4px 0;border-radius:2px;"></span>
+        </button>
+      </div>
+      <div id="mobileMenu" style="display:none;" class="pt-3 pb-3 border-top border-zinc-100 mt-2">
+        <a href="#portfolio" class="d-block text-decoration-none nav-link-custom py-2"
+          onclick="closeMobileMenu()">Work</a>
+        <a href="#services" class="d-block text-decoration-none nav-link-custom py-2"
+          onclick="closeMobileMenu()">Services</a>
+        <a href="#stack" class="d-block text-decoration-none nav-link-custom py-2" onclick="closeMobileMenu()">Stack</a>
+        <a href="#pricing" class="d-block text-decoration-none nav-link-custom py-2"
+          onclick="closeMobileMenu()">Pricing</a>
+        <a href="#book" class="d-block text-decoration-none nav-link-custom py-2" onclick="closeMobileMenu()">Book a
+          call</a>
+        <a href="#contact" class="d-block text-decoration-none text-center mt-2 btn-primary-cx"
+          style="border-radius:12px;padding:10px 0;" onclick="closeMobileMenu()">Hire me</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="text-center pt-5 pb-4 px-3">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Open for web projects</span>
+      <span class="badge-divider"></span>
+      <div class="d-flex align-items-center gap-1">
+        <span class="badge-tech">React</span>
+        <span class="badge-tech">WordPress</span>
+        <span class="badge-tech">Laravel</span>
+      </div>
+    </div>
+    <h1 class="fw-bold text-dark mb-4"
+      style="font-size:clamp(2rem,5vw,3.75rem);letter-spacing:-0.03em;line-height:1.1;">
+      A web developer who builds<br />
+      <span class="typewriter-line">for <span id="typewriter" class="typewriter-text gradient-text">your
+          business.</span></span>
+    </h1>
+    <p class="text-secondary mb-4 mx-auto" style="max-width:560px;font-size:1.05rem;">
+      <strong class="text-dark">codexaman</strong> is Aman Prasad — a freelance web developer based in <strong
+        class="text-dark">Kolkata, India</strong>, building fast, modern websites and web apps for small businesses
+      <strong class="text-dark">across the globe.</strong>
+    </p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="#contact" class="btn-primary-cx">Start a project</a>
+      <a href="#book" class="btn-secondary-cx">Book a free call</a>
+    </div>
+  </section>
+
+  <!-- ========== HERO VISUAL ========== -->
+  <section class="container pb-5" style="max-width:1100px;">
+    <div class="hero-wrap">
+      <canvas id="heroCanvas"></canvas>
+      <div class="hero-inner">
+        <div class="hero-bar">
+          <div class="hero-dot" style="background:rgba(248,113,113,0.8);"></div>
+          <div class="hero-dot" style="background:rgba(250,204,21,0.8);"></div>
+          <div class="hero-dot" style="background:rgba(74,222,128,0.8);"></div>
+          <div class="hero-url ms-3">codexaman.in</div>
+        </div>
+        <div class="d-flex flex-column align-items-center text-center px-4 py-5">
+          <p class="text-uppercase fw-medium mb-3"
+            style="font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.15em;">Web Development · Kolkata, India
+          </p>
+          <h2 class="text-white fw-bold mb-3"
+            style="font-size:clamp(1.4rem,4vw,2.4rem);letter-spacing:-0.03em;line-height:1.2;max-width:480px;">I build
+            websites.<br />You grow your business.</h2>
+          <p class="mb-4" style="color:rgba(255,255,255,0.5);font-size:0.875rem;max-width:360px;">From simple landing
+            pages to full business websites — designed, developed, and shipped by someone who cares about your goals.
+          </p>
+          <div class="d-flex flex-wrap gap-2 justify-content-center">
+            <span class="tech-pill">WordPress</span>
+            <span class="tech-pill">React</span>
+            <span class="tech-pill">Laravel</span>
+            <span class="tech-pill">Shopify</span>
+            <span class="tech-pill">MERN</span>
+            <span class="tech-pill">Firebase</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-fade-out"></div>
+    </div>
+  </section>
+
+  <!-- ========== TECH STACK GRID ========== -->
+  <section class="container pb-5 fade-in" style="max-width:1100px;">
+    <p class="text-center text-uppercase fw-medium mb-4" style="font-size:0.7rem;letter-spacing:0.12em;color:#a1a1aa;">
+      Technologies I work with</p>
+    <div class="row g-2 row-cols-3 row-cols-sm-4 row-cols-md-6">
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>WordPress</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>React</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>Flutter</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>Laravel</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path
+              d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
+          </svg>Node.js</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 17l6-6-6-6" />
+            <line x1="12" y1="19" x2="20" y2="19" />
+          </svg>PHP</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9" />
+            <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+          </svg>Tailwind</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>JavaScript</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+          </svg>MongoDB</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+          </svg>MySQL</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          </svg>Firebase</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          </svg>Supabase</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 0 1-8 0" />
+          </svg>WooCommerce</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>React Native</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="6" y1="3" x2="6" y2="15" />
+            <circle cx="18" cy="6" r="3" />
+            <circle cx="6" cy="18" r="3" />
+            <path d="M18 9a9 9 0 0 1-9 9" />
+          </svg>Git</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14" />
+            <path d="M12 5l7 7-7 7" />
+          </svg>REST APIs</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18" />
+            <path d="M9 21V9" />
+          </svg>Shopify</div>
+      </div>
+      <div class="col">
+        <div class="tech-grid-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+            <line x1="12" y1="22.08" x2="12" y2="12" />
+          </svg>Elementor</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3 FEATURE CARDS ========== -->
+  <section class="container pb-5 fade-in" style="max-width:1100px;">
+    <div class="d-flex justify-content-center mb-4">
+      <span class="section-tag">What I deliver</span>
+    </div>
+    <h2 class="text-center fw-bold mb-2" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;">Websites
+      that work as hard<br /><span class="gradient-text">as your business does.</span></h2>
+    <p class="text-center text-secondary mb-5 mx-auto" style="max-width:500px;">Clean code, pixel-perfect design,
+      on-time delivery — every single project, for clients across India and worldwide.</p>
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+        <div class="feature-dark-card h-100 d-flex flex-column justify-content-end">
+          <div class="feature-dark-overlay"></div>
+          <div class="feature-dark-dots"></div>
+          <div class="position-relative p-4">
+            <p class="text-white fw-bold mb-2" style="font-size:1.35rem;line-height:1.3;">Launch-ready in days, not
+              weeks.</p>
+            <p class="mb-4" style="color:#a1a1aa;font-size:0.875rem;">I move fast. No lengthy briefing cycles — just
+              results, shipped clean.</p>
+            <a href="#contact" class="btn-primary-cx" style="font-size:0.8rem;">Start a project →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="glow-card h-100 p-4 d-flex flex-column justify-content-between">
+          <div>
+            <p class="fw-bold text-dark mb-1" style="font-size:3.5rem;letter-spacing:-0.04em;line-height:1;">50+</p>
+            <p class="text-uppercase fw-medium mb-3" style="font-size:0.7rem;letter-spacing:0.1em;color:#a1a1aa;">
+              Projects delivered</p>
+            <p class="text-secondary" style="font-size:0.875rem;line-height:1.6;">Clients across India, UK, US, UAE, and
+              Southeast Asia — delivered on time and on budget.</p>
+          </div>
+          <div class="d-flex flex-wrap gap-2 mt-4">
+            <span
+              style="font-size:0.7rem;border:1px solid #e4e4e7;color:#71717a;padding:4px 10px;border-radius:6px;">Web
+              Apps</span>
+            <span
+              style="font-size:0.7rem;border:1px solid #e4e4e7;color:#71717a;padding:4px 10px;border-radius:6px;">E-commerce</span>
+            <span
+              style="font-size:0.7rem;border:1px solid #e4e4e7;color:#71717a;padding:4px 10px;border-radius:6px;">Landing
+              Pages</span>
+            <span
+              style="font-size:0.7rem;border:1px solid #e4e4e7;color:#71717a;padding:4px 10px;border-radius:6px;">Dashboards</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="accent-card-cx h-100 d-flex flex-column justify-content-between">
+          <div>
+            <p class="text-white fw-semibold mb-4">How I work</p>
+            <ul class="list-unstyled" style="display:flex;flex-direction:column;gap:14px;">
+              <li class="d-flex align-items-start gap-2 text-white" style="font-size:0.875rem;opacity:0.9;"><span
+                  style="opacity:0.5;font-size:1.1rem;margin-top:-2px;">›</span>Understand your business goal first</li>
+              <li class="d-flex align-items-start gap-2 text-white" style="font-size:0.875rem;opacity:0.9;"><span
+                  style="opacity:0.5;font-size:1.1rem;margin-top:-2px;">›</span>Design before a single line of code</li>
+              <li class="d-flex align-items-start gap-2 text-white" style="font-size:0.875rem;opacity:0.9;"><span
+                  style="opacity:0.5;font-size:1.1rem;margin-top:-2px;">›</span>Ship fast, iterate from your feedback
+              </li>
+              <li class="d-flex align-items-start gap-2 text-white" style="font-size:0.875rem;opacity:0.9;"><span
+                  style="opacity:0.5;font-size:1.1rem;margin-top:-2px;">›</span>Dedicated support after launch</li>
+            </ul>
+          </div>
+          <div>
+            <div style="height:1px;background:rgba(255,255,255,0.2);margin:20px 0 12px;"></div>
+            <p style="color:rgba(255,255,255,0.6);font-size:0.7rem;">Available for global web projects</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <a href="#services" class="btn-dark-cx">View all services</a>
+    </div>
+  </section>
+
+  <!-- ========== STATS BAR ========== -->
+  <section class="container pb-5 fade-in" style="max-width:1100px;">
+    <div class="stat-bar bg-white p-4 p-md-5">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-sm-3">
+          <p class="fw-bold text-dark mb-1" style="font-size:1.9rem;letter-spacing:-0.03em;">50+</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;">Projects delivered</p>
+        </div>
+        <div class="col-6 col-sm-3">
+          <p class="fw-bold text-dark mb-1" style="font-size:1.9rem;letter-spacing:-0.03em;">3–7</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;">Day avg. delivery</p>
+        </div>
+        <div class="col-6 col-sm-3">
+          <p class="fw-bold text-dark mb-1" style="font-size:1.9rem;letter-spacing:-0.03em;">100%</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;">On-time rate</p>
+        </div>
+        <div class="col-6 col-sm-3">
+          <p class="fw-bold text-dark mb-1" style="font-size:1.9rem;letter-spacing:-0.03em;">Global</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;">Client base</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO SLIDER ========== -->
+  <section id="portfolio" class="container pb-5 fade-in" style="max-width:1100px;">
+    <div class="text-center mb-5">
+      <span class="section-tag">My work</span>
+      <h2 class="fw-bold mt-3 mb-2" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;">Built by
+        me.<br /><span class="gradient-text">Loved by clients.</span></h2>
+      <p class="text-secondary mx-auto" style="font-size:0.875rem;max-width:400px;">A glimpse into what I build — web
+        apps, stores, dashboards, and everything in between.</p>
+    </div>
+    <div class="portfolio-wrap">
+      <div class="d-flex align-items-center gap-2 px-3 py-2"
+        style="border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.4);">
+        <div class="hero-dot" style="background:rgba(248,113,113,0.8);"></div>
+        <div class="hero-dot" style="background:rgba(250,204,21,0.8);"></div>
+        <div class="hero-dot" style="background:rgba(74,222,128,0.8);"></div>
+        <div class="ms-auto d-flex gap-2">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous"><svg width="14" height="14" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg></button>
+          <button class="slider-btn" id="nextBtn" aria-label="Next"><svg width="14" height="14" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg></button>
+        </div>
+      </div>
+      <div style="overflow:hidden;position:relative;">
+        <div class="portfolio-slider-track" id="sliderTrack">
+          <div class="portfolio-slide">
+            <video class="portfolio-video" autoplay muted loop playsinline>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                type="video/mp4" />
+            </video>
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-info">
+              <div class="d-flex align-items-end justify-content-between gap-3">
+                <div>
+                  <div class="d-flex gap-2 mb-2"><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">Laravel</span><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">React</span><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">MySQL</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-1" style="font-size:1.25rem;">Business Management Platform</h3>
+                  <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;">A full-scale CRM & ERP web application for
+                    a logistics company in the UK.</p>
+                </div>
+                <a href="#contact" class="btn-primary-cx flex-shrink-0 d-none d-sm-inline-block"
+                  style="font-size:0.8rem;padding:10px 20px;white-space:nowrap;">Build this →</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-slide">
+            <video class="portfolio-video" muted loop playsinline>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+                type="video/mp4" />
+            </video>
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-info">
+              <div class="d-flex align-items-end justify-content-between gap-3">
+                <div>
+                  <div class="d-flex gap-2 mb-2"><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">Flutter</span><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">Firebase</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-1" style="font-size:1.25rem;">Cross-Platform Mobile App</h3>
+                  <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;">Flutter app with real-time Firebase sync,
+                    deployed on Android & iOS.</p>
+                </div>
+                <a href="#contact" class="btn-primary-cx flex-shrink-0 d-none d-sm-inline-block"
+                  style="font-size:0.8rem;padding:10px 20px;white-space:nowrap;">Build this →</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-slide">
+            <video class="portfolio-video" muted loop playsinline>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                type="video/mp4" />
+            </video>
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-info">
+              <div class="d-flex align-items-end justify-content-between gap-3">
+                <div>
+                  <div class="d-flex gap-2 mb-2"><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">WordPress</span><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">WooCommerce</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-1" style="font-size:1.25rem;">E-Commerce Store</h3>
+                  <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;">WooCommerce store with Razorpay, custom
+                    theme, and full product management — live in 5 days.</p>
+                </div>
+                <a href="#contact" class="btn-primary-cx flex-shrink-0 d-none d-sm-inline-block"
+                  style="font-size:0.8rem;padding:10px 20px;white-space:nowrap;">Build this →</a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-slide">
+            <video class="portfolio-video" muted loop playsinline>
+              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                type="video/mp4" />
+            </video>
+            <div class="portfolio-overlay"></div>
+            <div class="portfolio-info">
+              <div class="d-flex align-items-end justify-content-between gap-3">
+                <div>
+                  <div class="d-flex gap-2 mb-2"><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">MERN
+                      Stack</span><span
+                      style="font-size:0.7rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);padding:4px 10px;border-radius:6px;">Supabase</span>
+                  </div>
+                  <h3 class="text-white fw-bold mb-1" style="font-size:1.25rem;">SaaS Web Application</h3>
+                  <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;">Full-stack MERN app with auth, dashboard,
+                    and real-time data for a SaaS startup.</p>
+                </div>
+                <a href="#contact" class="btn-primary-cx flex-shrink-0 d-none d-sm-inline-block"
+                  style="font-size:0.8rem;padding:10px 20px;white-space:nowrap;">Build this →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center justify-content-center gap-2 py-3" style="background:rgba(0,0,0,0.3);">
+        <button class="portfolio-dot active" data-index="0"></button>
+        <button class="portfolio-dot" data-index="1"></button>
+        <button class="portfolio-dot" data-index="2"></button>
+        <button class="portfolio-dot" data-index="3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section id="services" class="container pb-4 fade-in" style="max-width:1100px;">
+    <div class="card-static p-4 p-md-5 bg-white">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-md-6">
+          <h2 class="fw-bold mb-3" style="font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-0.03em;">The <span
+              class="text-accent">right technology</span> for every project.</h2>
+          <p class="text-secondary mb-4" style="font-size:0.875rem;line-height:1.7;">I pick the best stack for your
+            goals — no bloat, no overengineering. Whether it's a landing page or a full-scale platform, I've shipped it
+            before.</p>
+          <div class="mb-3">
+            <p class="text-uppercase fw-medium mb-2" style="font-size:0.7rem;color:#a1a1aa;">Frontend & Web</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span
+                style="background:var(--dark);color:#fff;font-size:0.75rem;padding:6px 12px;border-radius:8px;font-weight:500;">React
+                / React Native</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Flutter</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Tailwind
+                CSS</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">JavaScript</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">HTML
+                / CSS</span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <p class="text-uppercase fw-medium mb-2" style="font-size:0.7rem;color:#a1a1aa;">Backend & CMS</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span
+                style="background:var(--dark);color:#fff;font-size:0.75rem;padding:6px 12px;border-radius:8px;font-weight:500;">Laravel</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Node.js</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">MERN
+                / MEAN</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">WordPress</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">WooCommerce</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Shopify</span>
+            </div>
+          </div>
+          <div>
+            <p class="text-uppercase fw-medium mb-2" style="font-size:0.7rem;color:#a1a1aa;">Cloud & Hosting</p>
+            <div class="d-flex flex-wrap gap-2">
+              <span
+                style="background:var(--dark);color:#fff;font-size:0.75rem;padding:6px 12px;border-radius:8px;font-weight:500;">Firebase</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Supabase</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">REST
+                APIs</span>
+              <span
+                style="border:1px solid #e4e4e7;color:#52525b;font-size:0.75rem;padding:6px 12px;border-radius:8px;">Git
+                / GitHub</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHEAP & FAST DEV IS A TRAP ========== -->
+  <section class="container py-4 fade-in" style="max-width:1100px;">
+    <div class="text-center mb-5">
+      <span class="section-tag">Read this before you hire anyone</span>
+      <h2 class="fw-bold mt-3 mb-3" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;">Don't fall for
+        the <span class="text-accent">"cheap & 2-day delivery"</span> trap.</h2>
+      <p class="text-secondary mx-auto" style="font-size:0.95rem;max-width:640px;line-height:1.7;">A lot of
+        freelancers lure you in with rock-bottom prices and "website ready in 2-3 days" promises. It sounds great —
+        until the bugs show up, the support disappears, and you find out it's a copy-pasted template from someone
+        else's project. At that point, you end up spending <strong class="text-dark">more money fixing it</strong>
+        than you would have spent doing it right the first time.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <div class="trap-card">
+          <div class="trap-title"><span class="trap-icon-x">✕</span> The "cheap & quick" trap</div>
+          <ul class="list-unstyled trap-list d-flex flex-column gap-3">
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Low price today,
+              bigger repair bills tomorrow</li>
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Rushed 2-3 day
+              builds full of bugs and broken features</li>
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Zero support once
+              they're paid — you're on your own</li>
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Copy-pasted
+              templates recycled from someone else's project</li>
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Messy, low-quality
+              code nobody else can maintain</li>
+            <li><span class="trap-icon-x" style="width:18px;height:18px;font-size:0.6rem;">✕</span>Slow, bloated
+              websites that hurt your business</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="win-card">
+          <div class="win-title"><span class="win-icon-check">✓</span> What you get with codexaman</div>
+          <ul class="list-unstyled win-list d-flex flex-column gap-3">
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>Code built from
+              scratch — 100% yours, no shortcuts</li>
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>Clean, no
+              garbage copy-paste — written for your project only</li>
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>Fast, optimized
+              performance from day one</li>
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>Realistic
+              timelines — done right, not just done fast</li>
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>Real support
+              after launch, not silence</li>
+            <li><span class="win-icon-check" style="width:18px;height:18px;font-size:0.6rem;">✓</span>You save money
+              long-term instead of paying twice to fix it</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-4" style="font-size:0.85rem;color:#a1a1aa;">Bottom line: cheap and rushed almost always
+      costs more in the end. I'd rather build it right the first time.</p>
+  </section>
+
+  <!-- ========== WEB / MOBILE / LANDING PAGES ========== -->
+  <section class="container py-4 fade-in" style="max-width:1100px;">
+    <div class="card-static p-4 p-md-5 bg-white">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-md-6 order-2 order-md-1">
+
+        </div>
+        <div class="col-12 col-md-6 order-1 order-md-2">
+          <h2 class="fw-bold mb-3" style="font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-0.03em;">Web, mobile, or both
+            —<br /><span class="text-accent">I've got you covered.</span></h2>
+          <p class="text-secondary mb-4" style="font-size:0.875rem;line-height:1.7;">From WordPress sites your team can
+            manage, to Flutter apps on Android and iOS, to full-stack MERN platforms — one developer for your entire
+            digital product.</p>
+          <ul class="list-unstyled d-flex flex-column gap-3">
+            <li class="d-flex align-items-start gap-2 text-secondary" style="font-size:0.875rem;"><span
+                style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;"></span>WordPress,
+              Elementor & WooCommerce builds</li>
+            <li class="d-flex align-items-start gap-2 text-secondary" style="font-size:0.875rem;"><span
+                style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;"></span>Flutter
+              & React Native cross-platform apps</li>
+            <li class="d-flex align-items-start gap-2 text-secondary" style="font-size:0.875rem;"><span
+                style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;"></span>MERN
+              / MEAN full-stack web applications</li>
+            <li class="d-flex align-items-start gap-2 text-secondary" style="font-size:0.875rem;"><span
+                style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;"></span>CRM,
+              ERP & custom admin dashboards</li>
+            <li class="d-flex align-items-start gap-2 text-secondary" style="font-size:0.875rem;"><span
+                style="width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;"></span>Landing
+              pages designed to convert</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FAQ / WHAT'S INCLUDED — REDESIGNED GRID ========== -->
+  <section class="container py-4 fade-in" style="max-width:1100px;">
+    <div class="row g-5 align-items-start">
+      <div class="col-12 col-md-6 d-flex flex-column">
+       
+      </div>
+      <div class="col-12 col-md-6">
+        <span class="section-tag mb-4 d-inline-block">What's included</span>
+        <h2 class="fw-bold mb-5" style="font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-0.03em;">Every project
+          comes<br />fully equipped.</h2>
+        <div class="included-grid">
+          <div class="included-card">
+            <div class="included-num">01</div>
+            <div>
+              <p class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Code built from scratch — clean &
+                original</p>
+              <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.6;">No copy-paste templates from
+                someone else's project. Every line is written for your business, well-structured, and easy to hand
+                off.</p>
+            </div>
+          </div>
+          <div class="included-card">
+            <div class="included-num">02</div>
+            <div>
+              <p class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Mobile responsive design</p>
+              <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.6;">Pixel-perfect on every device —
+                phone, tablet, desktop. Built mobile-first from the very first component.</p>
+            </div>
+          </div>
+          <div class="included-card">
+            <div class="included-num">03</div>
+            <div>
+              <p class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Performance optimized, not rushed</p>
+              <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.6;">Fast load times and lean code —
+                built at a pace that avoids bugs, not squeezed into an unrealistic 2-day deadline.</p>
+            </div>
+          </div>
+          <div class="included-card">
+            <div class="included-num">04</div>
+            <div>
+              <p class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Real post-launch support</p>
+              <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.6;">I don't vanish after go-live.
+                Bug fixes, updates, new features — your long-term web partner, not a one-off freelancer.</p>
+            </div>
+          </div>
+          <div class="included-card">
+            <div class="included-num">05</div>
+            <div>
+              <p class="fw-semibold text-dark mb-1" style="font-size:0.9rem;">Global-ready delivery</p>
+              <p class="text-secondary mb-0" style="font-size:0.8rem;line-height:1.6;">Async collaboration across time
+                zones, international payment gateways, multi-currency ready. Clients in the UK, US, UAE, and Southeast
+                Asia trust me.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section id="work" class="container py-5 fade-in" style="max-width:1100px;">
+    <div class="text-center mb-5">
+      <span class="section-tag">The process</span>
+      <h2 class="fw-bold mt-3 mb-2" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;">From brief to
+        live product,<br />in a few clean steps.</h2>
+      <p class="text-secondary mx-auto" style="font-size:0.875rem;max-width:400px;">No ambiguity. No wasted time. A
+        transparent process from day one.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="process-card h-100">
+          <div class="process-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" y1="19" x2="12" y2="23" />
+              <line x1="8" y1="23" x2="16" y2="23" />
+            </svg></div>
+          <h3 class="fw-semibold text-dark mb-2" style="font-size:0.875rem;">Discovery call</h3>
+          <p style="color:#a1a1aa;font-size:0.75rem;line-height:1.6;">We talk through your goals, audience, and what
+            success looks like — no fluff, just clarity.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="process-card h-100">
+          <div class="process-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+            </svg></div>
+          <h3 class="fw-semibold text-dark mb-2" style="font-size:0.875rem;">Design first</h3>
+          <p style="color:#a1a1aa;font-size:0.75rem;line-height:1.6;">Wireframe and design before writing code. You
+            approve the look before I build.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="process-card h-100">
+          <div class="process-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg></div>
+          <h3 class="fw-semibold text-dark mb-2" style="font-size:0.875rem;">Build & review</h3>
+          <p style="color:#a1a1aa;font-size:0.75rem;line-height:1.6;">Development with regular check-ins. A staging link
+            so you can review before it goes live.</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="process-card h-100">
+          <div class="process-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)"
+              stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+              <path
+                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+            </svg></div>
+          <h3 class="fw-semibold text-dark mb-2" style="font-size:0.875rem;">Launch & support</h3>
+          <p style="color:#a1a1aa;font-size:0.75rem;line-height:1.6;">Go live, stay around for questions and tweaks — a
+            long-term partner, not a ghost.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TECH BENTO GRID ========== -->
+  <section id="stack" class="container pb-5 fade-in" style="max-width:1100px;">
+    <div class="text-center mb-5">
+      <span class="section-tag">The stack</span>
+      <h2 class="fw-bold mt-3 mb-2" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;">Tools I use to
+        build<br /><span class="gradient-text">modern web products.</span></h2>
+      <p class="text-secondary mx-auto" style="font-size:0.875rem;max-width:400px;">Every tool chosen for a reason. No
+        bloat. Just what gets the job done beautifully.</p>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-12 col-md-4">
+        <div class="bento-card bento-dark p-4 d-flex flex-column justify-content-between" style="min-height:224px;">
+          <div>
+            <div class="d-flex align-items-center justify-content-center mb-4"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,0.1);"><svg width="20"
+                height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg></div>
+            <p class="text-white fw-bold mb-2" style="font-size:1.15rem;">Laravel & MERN / MEAN</p>
+            <p style="color:#71717a;font-size:0.75rem;line-height:1.6;">Robust, scalable web applications. From REST
+              APIs to full-stack platforms — production-ready from day one.</p>
+          </div>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <span
+              style="font-size:0.7rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:6px;">PHP
+              8+</span>
+            <span
+              style="font-size:0.7rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:6px;">Node.js</span>
+            <span
+              style="font-size:0.7rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:6px;">MongoDB</span>
+            <span
+              style="font-size:0.7rem;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.1);padding:4px 10px;border-radius:6px;">REST
+              APIs</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="bento-card bento-light p-4 d-flex flex-column justify-content-between" style="min-height:224px;">
+          <div>
+            <div class="d-flex align-items-center justify-content-center mb-4"
+              style="width:40px;height:40px;border-radius:12px;background:rgba(108,99,255,0.08);"><svg width="20"
+                height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg></div>
+            <p class="text-dark fw-bold mb-2" style="font-size:1.1rem;">Flutter & React Native</p>
+            <p class="text-secondary" style="font-size:0.75rem;line-height:1.6;">One codebase, two platforms. Ship on
+              Android and iOS simultaneously with native-level performance.</p>
+          </div>
+          <div style="border-top:1px solid #f0f0f0;margin-top:16px;padding-top:12px;">
+            <p style="font-size:0.7rem;color:#a1a1aa;">Android · iOS · Expo · Firebase</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="bento-card bento-gray p-4 d-flex flex-column justify-content-between" style="min-height:224px;">
+          <div>
+            <div class="d-flex align-items-center justify-content-center mb-4"
+              style="width:40px;height:40px;border-radius:12px;background:#f3e8ff;"><svg width="20" height="20"
+                viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg></div>
+            <p class="text-dark fw-bold mb-2" style="font-size:1.1rem;">WordPress & WooCommerce</p>
+            <p class="text-secondary" style="font-size:0.75rem;line-height:1.6;">Your team manages content themselves —
+              zero developer dependency after handoff. Full e-commerce with global payment gateways.</p>
+          </div>
+          <div style="border-top:1px solid #e8e8e8;margin-top:16px;padding-top:12px;">
+            <p style="font-size:0.7rem;color:#a1a1aa;">Razorpay · Stripe · PayPal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <div class="bento-card bento-light p-4 d-flex flex-column justify-content-between" style="min-height:200px;">
+          <div>
+            <div class="d-flex align-items-center justify-content-center mb-4"
+              style="width:40px;height:40px;border-radius:12px;background:#fff7ed;"><svg width="20" height="20"
+                viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              </svg></div>
+            <p class="text-dark fw-bold mb-2" style="font-size:1.1rem;">Firebase & Supabase</p>
+            <p class="text-secondary" style="font-size:0.75rem;line-height:1.6;">Real-time databases, authentication,
+              cloud functions, and storage. Backend without the headache.</p>
+          </div>
+          <div style="border-top:1px solid #f0f0f0;margin-top:16px;padding-top:12px;">
+            <p style="font-size:0.7rem;color:#a1a1aa;">Real-time · Auth · Storage · Serverless</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-8">
+        <div class="bento-card bento-accent-grad p-4 d-flex flex-column justify-content-between"
+          style="min-height:200px;">
+          <div>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <div class="d-flex align-items-center justify-content-center"
+                style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,0.15);"><svg width="20"
+                  height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M3 9h18" />
+                  <path d="M9 21V9" />
+                </svg></div>
+              <span class="text-uppercase fw-medium"
+                style="font-size:0.7rem;color:rgba(255,255,255,0.6);letter-spacing:0.1em;">Pixel-perfect</span>
+            </div>
+            <p class="text-white fw-bold mb-2" style="font-size:1.4rem;line-height:1.3;">Fast, Clean, Responsive Web
+              Design</p>
+            <p style="color:rgba(255,255,255,0.7);font-size:0.875rem;line-height:1.6;max-width:440px;">I design before I
+              code. Every website is built mobile-first, visually polished, and fast — so your first impression is
+              always your best one.</p>
+          </div>
+          <div class="d-flex gap-2 flex-wrap mt-4">
+            <span
+              style="font-size:0.75rem;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:8px;">Mobile-first</span>
+            <span
+              style="font-size:0.75rem;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:8px;">Figma
+              Design</span>
+            <span
+              style="font-size:0.75rem;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:8px;">Tailwind
+              CSS</span>
+            <span
+              style="font-size:0.75rem;background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:8px;">Fast
+              Load Times</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section id="pricing" class="container py-5 fade-in" style="max-width:1100px;">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-2" style="font-size:clamp(1.6rem,4vw,2.4rem);letter-spacing:-0.03em;"><span
+          class="text-accent">Transparent</span> pricing, zero surprises</h2>
+      <p class="text-secondary mx-auto" style="max-width:580px;">No hidden fees. Pay once, own it forever. Every plan
+        includes a free basic logo, 6 months of free minor changes, no revision fees, and lifetime query support.</p>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+      <span class="include-pill"><span>✓</span> Free basic logo</span>
+      <span class="include-pill"><span>✓</span> 6 months free minor changes</span>
+      <span class="include-pill"><span>✓</span> No revision fees</span>
+      <span class="include-pill"><span>✓</span> Lifetime query support</span>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="plan-card h-100 d-flex flex-column">
+          <p class="text-uppercase fw-bold mb-1" style="font-size:0.7rem;letter-spacing:0.08em;color:#a1a1aa;">Starter
+          </p>
+          <p class="text-secondary mb-4" style="font-size:0.875rem;">Portfolio & landing pages</p>
+          <p class="fw-bold text-dark mb-1" style="font-size:2rem;letter-spacing:-0.03em;">₹5,999</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;margin-bottom:20px;">one-time · upto 5 pages</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-4 flex-grow-1" style="font-size:0.875rem;color:#52525b;">
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Portfolio
+              or landing page</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Up
+              to 5 sections / pages</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Mobile
+              responsive</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Contact
+              form</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>3-day
+              delivery</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#f4f4f5;color:#a1a1aa;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✕</span><span
+                style="color:#a1a1aa;">CMS panel</span></li>
+          </ul>
+          <a href="#contact" class="btn-primary-cx d-block text-center w-100">Get started</a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="plan-card popular h-100 d-flex flex-column position-relative">
+          <div class="plan-badge">Most Popular</div>
+          <p class="text-uppercase fw-bold mb-1" style="font-size:0.7rem;letter-spacing:0.08em;color:#71717a;">Business
+          </p>
+          <p style="color:#71717a;font-size:0.875rem;margin-bottom:16px;">Full website, up to 10 pages</p>
+          <p class="fw-bold text-white mb-1" style="font-size:2rem;letter-spacing:-0.03em;">₹8,999</p>
+          <p style="font-size:0.75rem;color:#71717a;margin-bottom:20px;">one-time · upto 10 pages</p>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-4 flex-grow-1" style="font-size:0.875rem;color:#d4d4d8;">
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Up
+              to 10 pages</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>WordPress
+              + Elementor</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Mobile
+              responsive</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>5-day
+              delivery</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Full
+              CMS access</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:rgba(22,163,74,0.2);color:#4ade80;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Blog
+              / portfolio section</li>
+          </ul>
+          <a href="#contact" class="btn-secondary-cx d-block text-center w-100"
+            style="border-color:rgba(255,255,255,0.2);color:#fff;">Get started</a>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="custom-plan-card h-100 d-flex flex-column">
+          <p class="fw-bold text-uppercase mb-1" style="font-size:0.7rem;letter-spacing:0.08em;color:var(--accent);">
+            Custom</p>
+          <p class="text-secondary mb-3" style="font-size:0.875rem;">Apps, stores & complex platforms</p>
+          <p class="fw-bold text-dark mb-1" style="font-size:2rem;letter-spacing:-0.03em;">Let's talk</p>
+          <p style="font-size:0.75rem;color:#a1a1aa;margin-bottom:12px;">custom quote · any scale</p>
+          <div class="custom-variety-grid">
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>Android App</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12.01" y2="18" />
+              </svg>iOS App</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>E-Commerce</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>Desktop App</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" />
+                <path d="M12 5l7 7-7 7" />
+              </svg>REST API</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M9 21V9" />
+              </svg>SaaS Platform</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+              </svg>CRM / ERP</div>
+            <div class="custom-variety-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>Dashboard</div>
+          </div>
+          <ul class="list-unstyled d-flex flex-column gap-2 mb-4 flex-grow-1" style="font-size:0.8rem;color:#52525b;">
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Custom
+              integrations & APIs</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Timeline
+              as per scope</li>
+            <li class="d-flex align-items-start gap-2"><span
+                style="width:16px;height:16px;border-radius:50%;background:#dcfce7;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:0.65rem;flex-shrink:0;margin-top:2px;">✓</span>Dedicated
+              priority support</li>
+          </ul>
+          <a href="#contact" class="btn-primary-cx d-block text-center w-100">Get a quote</a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-4" style="font-size:0.75rem;color:#a1a1aa;">Need something different? <a href="#contact"
+        style="color:var(--accent);text-decoration:underline;">Let's talk</a> — I price for small businesses, not big
+      agencies.</p>
+  </section>
+
+  <!-- ========== BOOK A CALL ========== -->
+  <section id="book" class="container pb-4 fade-in" style="max-width:1100px;">
+    <div class="card-static overflow-hidden bg-white">
+      <div class="row g-0">
+        <div class="col-12 col-md-6 p-4 p-md-5 d-flex flex-column justify-content-center"
+          style="border-right:1px solid #f0f0f0;">
+          <span class="section-tag d-inline-block mb-4">Free 30-min call</span>
+          <h2 class="fw-bold mb-2" style="font-size:clamp(1.3rem,3vw,1.8rem);letter-spacing:-0.03em;">Let's talk
+            before<br />you commit.</h2>
+          <p class="text-secondary mb-4" style="font-size:0.875rem;line-height:1.7;">No pressure. I'll discuss your
+            project, share my approach, and you decide if we're the right fit — zero obligation.</p>
+          <div class="d-flex flex-column gap-4 mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:32px;height:32px;border-radius:8px;border:1px solid #f0f0f0;background:#f9f9f9;"><svg
+                  width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg></div>
+              <div>
+                <p class="fw-semibold text-dark mb-0" style="font-size:0.875rem;">30 minutes</p>
+                <p style="font-size:0.75rem;color:#a1a1aa;">Quick and focused — no fluff</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-start gap-3">
+              <div class="d-flex align-items-center justify-content-center flex-shrink-0"
+                style="width:32px;height:32px;border-radius:8px;border:1px solid #f0f0f0;background:#f9f9f9;"><svg
+                  width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg></div>
+              <div>
+                <p class="fw-semibold text-dark mb-0" style="font-size:0.875rem;">Get a rough estimate</p>
+                <p style="font-size:0.75rem;color:#a1a1aa;">Timeline and budget — no surprises later</p>
+              </div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #f0f0f0;padding-top:20px;">
+            <p style="font-size:0.75rem;color:#a1a1aa;margin-bottom:10px;">Or reach me directly on</p>
+            <div class="d-flex gap-2">
+              <a href="https://wa.me/918420966418" target="_blank" class="wa-pill"><svg width="12" height="12"
+                  viewBox="0 0 24 24" fill="#25D366">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                </svg>WhatsApp</a>
+              <a href="mailto:icodexaman@gmail.com" class="social-pill">Email</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 calendly-container">
+          <div class="calendly-inline-widget"
+            data-url="https://calendly.com/amanprasad-um/30min?hide_gdpr_banner=1&primary_color=6c63ff&hide_event_type_details=1&hide_landing_page_details=1"
+            style="width:100%;height:580px;min-width:unset;"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="container pb-5 fade-in" style="max-width:1100px;">
+    <div class="card-static overflow-hidden bg-white">
+      <div class="row g-0">
+        <div class="col-12 col-md-5 col-lg-4 p-4 p-md-5 d-flex flex-column justify-content-between"
+          style="background:#f9f9f9;border-right:1px solid #f0f0f0;">
+          <div>
+            <h2 class="fw-bold mb-2" style="font-size:1.4rem;letter-spacing:-0.03em;">Tell me about your project.</h2>
+            <p class="text-secondary mb-5" style="font-size:0.875rem;line-height:1.7;">I read every message personally
+              and reply within 24 hours. You talk directly to the person building your product — no middlemen.</p>
+            <div class="d-flex flex-column gap-4">
+              <div>
+                <p class="text-uppercase fw-bold mb-1" style="font-size:0.65rem;letter-spacing:0.08em;color:#a1a1aa;">
+                  Email</p><a href="mailto:icodexaman@gmail.com" class="text-dark fw-medium text-decoration-none"
+                  style="font-size:0.875rem;">icodexaman@gmail.com</a>
+              </div>
+              <div>
+                <p class="text-uppercase fw-bold mb-1" style="font-size:0.65rem;letter-spacing:0.08em;color:#a1a1aa;">
+                  WhatsApp</p><a href="https://wa.me/918420966418" target="_blank"
+                  class="text-dark fw-medium text-decoration-none" style="font-size:0.875rem;">+91 84209 66418</a>
+              </div>
+              <div>
+                <p class="text-uppercase fw-bold mb-1" style="font-size:0.65rem;letter-spacing:0.08em;color:#a1a1aa;">
+                  Instagram</p><a href="https://instagram.com/codexaman.in" target="_blank"
+                  class="text-dark fw-medium text-decoration-none" style="font-size:0.875rem;">@codexaman.in</a>
+              </div>
+              <div>
+                <p class="text-uppercase fw-bold mb-1" style="font-size:0.65rem;letter-spacing:0.08em;color:#a1a1aa;">
+                  Based in</p>
+                <p class="text-dark fw-medium mb-0" style="font-size:0.875rem;">Kolkata, India · Works worldwide</p>
+              </div>
+            </div>
+          </div>
+          <div style="border-top:1px solid #e4e4e7;padding-top:20px;margin-top:32px;">
+            <p style="font-size:0.75rem;color:#a1a1aa;margin-bottom:10px;">Also find me on</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="https://instagram.com/codexaman.in" target="_blank" class="social-pill">Instagram</a>
+              <a href="#" class="social-pill">LinkedIn</a>
+              <a href="#" class="social-pill">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 p-4 p-md-5">
+          <form id="form">
+            <input type="checkbox" name="botcheck" class="d-none" style="display:none;">
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-sm-6">
+                <label class="d-block fw-medium mb-1" style="font-size:0.75rem;color:#71717a;">Your name</label>
+                <input type="text" name="name" placeholder="Rahul Sharma" class="cx-input" required />
+              </div>
+              <div class="col-12 col-sm-6">
+                <label class="d-block fw-medium mb-1" style="font-size:0.75rem;color:#71717a;">Email address</label>
+                <input type="email" name="email" placeholder="rahul@company.com" class="cx-input" required />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="d-block fw-medium mb-1" style="font-size:0.75rem;color:#71717a;">What do you need?</label>
+              <select name="service" class="cx-input" style="color:#52525b;background:#fff;" required>
+                <option value="" disabled selected>Pick a service...</option>
+                <option>Landing Page / Portfolio Site (₹5,999)</option>
+                <option>Business Website — 10 pages (₹8,999)</option>
+                <option>Android App</option>
+                <option>iOS App</option>
+                <option>E-Commerce / WooCommerce Store</option>
+                <option>Desktop Application</option>
+                <option>REST API Development</option>
+                <option>SaaS Platform</option>
+                <option>CRM / ERP System</option>
+                <option>Admin Dashboard</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="d-block fw-medium mb-2" style="font-size:0.75rem;color:#71717a;">Approx. budget</label>
+              <div class="d-flex flex-wrap gap-2">
+                <div class="budget-option"><input type="radio" name="budget" value="Under ₹5k" id="b1" class="visually-hidden" /><label
+                    for="b1" class="budget-label">Under ₹5k</label></div>
+                <div class="budget-option"><input type="radio" name="budget" value="₹5k – ₹10k" id="b2" class="visually-hidden" /><label
+                    for="b2" class="budget-label">₹5k – ₹10k</label></div>
+                <div class="budget-option"><input type="radio" name="budget" value="₹10k – ₹30k" id="b3" class="visually-hidden" /><label
+                    for="b3" class="budget-label">₹10k – ₹30k</label></div>
+                <div class="budget-option"><input type="radio" name="budget" value="₹30k+" id="b4" class="visually-hidden" /><label
+                    for="b4" class="budget-label">₹30k+</label></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="d-block fw-medium mb-1" style="font-size:0.75rem;color:#71717a;">Project details</label>
+              <textarea rows="4" name="message"
+                placeholder="Describe your project — what it does, who it's for, when you need it live. The more detail, the faster I can scope it."
+                class="cx-input" style="resize:none;" required></textarea>
+            </div>
+            <div class="d-flex gap-3 flex-wrap">
+              <button type="submit" class="btn-dark-cx flex-grow-1">Send message</button>
+              <a href="https://wa.me/918420966418" target="_blank"
+                class="btn-secondary-cx d-flex align-items-center gap-2">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+            <p class="text-center mt-3" style="font-size:0.75rem;color:#a1a1aa;">I reply within 24 hours · No spam, ever
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer style="border-top:1px solid #f0f0f0;" class="pt-4 overflow-hidden">
+    <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3 pb-4"
+      style="max-width:1100px;">
+      <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">
+        <div class="d-flex align-items-center justify-content-center rounded-2"
+          style="width:24px;height:24px;background:var(--accent);"><span class="text-white"
+            style="font-size:0.6rem;font-weight:900;">cx</span></div>
+        <span class="fw-medium" style="font-size:0.875rem;">codexaman<span class="text-accent">.in</span></span>
+      </a>
+      <div class="d-flex gap-4">
+        <a href="#services" style="font-size:0.75rem;color:#a1a1aa;text-decoration:none;">Services</a>
+        <a href="#stack" style="font-size:0.75rem;color:#a1a1aa;text-decoration:none;">Stack</a>
+        <a href="#pricing" style="font-size:0.75rem;color:#a1a1aa;text-decoration:none;">Pricing</a>
+        <a href="#contact" style="font-size:0.75rem;color:#a1a1aa;text-decoration:none;">Contact</a>
+      </div>
+      <p style="font-size:0.75rem;color:#a1a1aa;margin:0;">© 2025 codexaman</p>
+    </div>
+    <!-- VIDEO MASK TEXT FOOTER BRAND -->
+    <div class="footer-video-mask-wrap">
+      <div class="footer-brand-video-container">
+        <video class="footer-brand-video" autoplay muted loop playsinline>
+          <source src="india.mp4" type="video/mp4" />
+        </video>
+        <h1 class="footer-brand-mask-text">codexaman</h1>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== CHATBOT ========== -->
+  <button id="cx-chat-btn" aria-label="Open chat">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </svg>
+  </button>
+
+  <div id="cx-chat-box">
+    <div class="cx-chat-header">
+      <div class="cx-chat-avatar">cx</div>
+      <div>
+        <div style="font-weight:600;font-size:0.875rem;">codexaman <span class="cx-chat-status"></span></div>
+        <div style="font-size:0.7rem;opacity:0.8;">Typically replies in minutes</div>
+      </div>
+      <button onclick="toggleChat()"
+        style="margin-left:auto;background:none;border:none;color:#fff;cursor:pointer;padding:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cx-chat-messages" id="cx-messages">
+      <div class="cx-msg bot">👋 Hi! I'm Aman. Looking to build a website or app? I'd love to help. What can I do for
+        you?</div>
+    </div>
+    <div class="cx-chat-quick" id="cx-quick-btns">
+      <button class="cx-quick-btn" onclick="quickReply('What services do you offer?')">Services</button>
+      <button class="cx-quick-btn" onclick="quickReply('What is your pricing?')">Pricing</button>
+      <button class="cx-quick-btn" onclick="quickReply('How long does a project take?')">Timeline</button>
+      <button class="cx-quick-btn" onclick="quickReply('How do I contact you?')">Contact</button>
+    </div>
+    <div class="cx-chat-input-row">
+      <input type="text" id="cx-chat-input" placeholder="Type a message..."
+        onkeydown="if(event.key==='Enter') sendChat()" />
+      <button id="cx-chat-send" onclick="sendChat()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13" />
+          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // ===== SCROLL FADE IN =====
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // ===== MOBILE MENU =====
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.style.display === 'flex';
+      mobileMenu.style.display = isOpen ? 'none' : 'flex';
+      mobileMenu.style.flexDirection = 'column';
+    });
+    function closeMobileMenu() { mobileMenu.style.display = 'none'; }
+
+    // ===== TYPEWRITER =====
+    const phrases = [
+      'your business.', 'startups in Kolkata.', 'global clients.',
+      'web platforms.', 'e-commerce stores.', 'MERN stack apps.',
+      'Flutter apps.', 'WordPress sites.', 'landing pages.',
+    ];
+    const el = document.getElementById('typewriter');
+    const typewriterLine = el.closest('.typewriter-line');
+    function lockTypewriterWidth() {
+      const temp = document.createElement('span');
+      temp.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font-size:inherit;font-weight:inherit;font-family:inherit;';
+      document.body.appendChild(temp);
+      let maxW = 0;
+      phrases.forEach(p => { temp.textContent = 'for ' + p; maxW = Math.max(maxW, temp.offsetWidth); });
+      document.body.removeChild(temp);
+      typewriterLine.style.minWidth = maxW + 'px';
+      typewriterLine.style.display = 'inline-block';
+    }
+    lockTypewriterWidth();
+    window.addEventListener('resize', lockTypewriterWidth);
+    let pi = 0, ci = 0, deleting = false;
+    function type() {
+      const phrase = phrases[pi];
+      if (!deleting) {
+        el.textContent = phrase.slice(0, ++ci);
+        if (ci === phrase.length) { deleting = true; return setTimeout(type, 1800); }
+      } else {
+        el.textContent = phrase.slice(0, --ci);
+        if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; return setTimeout(type, 300); }
+      }
+      setTimeout(type, deleting ? 40 : 65);
+    }
+    setTimeout(type, 1200);
+
+    // ===== HERO CANVAS =====
+    (function () {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let W, H, nodes = [];
+      function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+      resize();
+      window.addEventListener('resize', () => { resize(); initNodes(); });
+      function initNodes() {
+        nodes = [];
+        const count = Math.max(18, Math.floor(W * H / 14000));
+        for (let i = 0; i < count; i++) {
+          nodes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35, r: Math.random() * 1.8 + 0.8, alpha: Math.random() * 0.5 + 0.2 });
+        }
+      }
+      initNodes();
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < nodes.length; i++) {
+          for (let j = i + 1; j < nodes.length; j++) {
+            const dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 120) { ctx.beginPath(); ctx.strokeStyle = `rgba(108,99,255,${(1 - dist / 120) * 0.18})`; ctx.lineWidth = 0.8; ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke(); }
+          }
+        }
+        nodes.forEach(n => {
+          ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(108,99,255,${n.alpha})`; ctx.fill();
+          n.x += n.vx; n.y += n.vy;
+          if (n.x < 0 || n.x > W) n.vx *= -1;
+          if (n.y < 0 || n.y > H) n.vy *= -1;
+        });
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    // ===== PORTFOLIO SLIDER =====
+    (function () {
+      const track = document.getElementById('sliderTrack');
+      const slides = track ? track.querySelectorAll('.portfolio-slide') : [];
+      const dots = document.querySelectorAll('.portfolio-dot');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let current = 0;
+      const total = slides.length;
+      let autoTimer;
+      function goTo(idx) {
+        slides.forEach(s => { const v = s.querySelector('video'); if (v) v.pause(); });
+        current = (idx + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        const cv = slides[current].querySelector('video');
+        if (cv) cv.play();
+      }
+      function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 5000); }
+      function stopAuto() { clearInterval(autoTimer); }
+      if (prevBtn) prevBtn.addEventListener('click', () => { stopAuto(); goTo(current - 1); startAuto(); });
+      if (nextBtn) nextBtn.addEventListener('click', () => { stopAuto(); goTo(current + 1); startAuto(); });
+      dots.forEach(d => d.addEventListener('click', () => { stopAuto(); goTo(parseInt(d.dataset.index)); startAuto(); }));
+      goTo(0); startAuto();
+    })();
+
+    // ===== CALENDLY =====
+    window.addEventListener('load', function () {
+      if (window.Calendly) {
+        Calendly.initInlineWidget({
+          url: 'https://calendly.com/amanprasad-um/30min?hide_gdpr_banner=1&primary_color=6c63ff&hide_event_type_details=1&hide_landing_page_details=1',
+          parentElement: document.querySelector('.calendly-inline-widget'),
+        });
+      }
+      setTimeout(() => {
+        const iframe = document.querySelector('.calendly-inline-widget iframe');
+        if (iframe) { iframe.style.height = '580px'; iframe.style.overflow = 'hidden'; iframe.scrolling = 'no'; }
+      }, 3000);
+    });
+
+    // ===== CONTACT FORM (Web3Forms) =====
+    const form = document.getElementById('form');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      formData.append("access_key", "cf185d87-1b86-4377-88d6-6ff2e0fce031");
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "Sending...";
+      submitBtn.disabled = true;
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+        const data = await response.json();
+        if (response.ok) {
+          alert("Success! Your message has been sent.");
+          form.reset();
+        } else {
+          alert("Error: " + data.message);
+        }
+      } catch (error) {
+        alert("Something went wrong. Please try again.");
+      } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+
+    // ===== CHATBOT =====
+    const chatResponses = {
+      'what services do you offer': 'I build websites, web apps, mobile apps, and e-commerce stores! Services include WordPress, React, Laravel, MERN stack, Flutter, Shopify, WooCommerce, Firebase, and more. 🚀',
+      'what is your pricing': 'Starter plan starts at ₹5,999 (landing page, 5 pages, 3-day delivery). Business plan is ₹8,999 (full website, 10 pages, WordPress). For apps, SaaS, or custom work — let\'s talk for a custom quote! 💰',
+      'how long does a project take': 'Landing pages: 3 days. Business websites: 5–7 days. Web apps & mobile apps: depends on scope, usually 2–6 weeks. I always give a clear timeline before starting — never a rushed 2-day promise that leads to bugs. ⏱️',
+      'how do i contact you': 'You can reach me on WhatsApp at +91 84209 66418, email at icodexaman@gmail.com, or just fill the contact form on this page. I reply within 24 hours! 📩',
+      'whatsapp': 'My WhatsApp is +91 84209 66418 — feel free to message directly! I\'m usually quick to respond. 💬',
+      'email': 'You can email me at icodexaman@gmail.com. I reply within 24 hours, no exceptions! 📧',
+      'wordpress': 'Yes! I build WordPress sites with Elementor, WooCommerce, custom themes, and payment gateway integrations. Starting at ₹8,999. 🌐',
+      'react': 'Absolutely! React, Next.js, MERN stack — I\'ve built dashboards, SaaS platforms, and landing pages with React. Let\'s discuss your project! ⚛️',
+      'flutter': 'Yes, Flutter is one of my specialties! One codebase for both Android and iOS. Great for startups wanting to launch fast on both platforms. 📱',
+      'ecommerce': 'I build e-commerce stores with WooCommerce, Shopify, or custom MERN solutions. Payment gateways like Razorpay, Stripe, PayPal — all included. 🛒',
+      'laravel': 'Laravel is my go-to for backend! REST APIs, admin panels, CRM/ERP systems — I\'ve shipped many Laravel projects for clients globally. 🔧',
+      'location': 'I\'m based in Kolkata, India but work with clients worldwide — UK, US, UAE, Southeast Asia. Fully async, any timezone! 🌍',
+      'kolkata': 'Yes, I\'m based in Kolkata! But I work with clients globally. No need to be local — everything happens online. 🌐',
+      'cheap': 'I get it, budget matters! But super cheap + super fast (like 2-day) deliveries usually mean copy-pasted code, bugs, and no support later — costing you more to fix. I price fairly and build it right the first time. Happy to explain more! 💡',
+    };
+
+    function getBotReply(msg) {
+      const lower = msg.toLowerCase();
+      for (const key in chatResponses) {
+        if (lower.includes(key)) return chatResponses[key];
+      }
+      if (lower.includes('hi') || lower.includes('hello') || lower.includes('hey')) {
+        return 'Hey! 👋 Great to hear from you. Ask me about services, pricing, timeline, or just say what you want to build — I\'ll help!';
+      }
+      if (lower.includes('thanks') || lower.includes('thank you')) {
+        return 'You\'re welcome! 😊 Feel free to ask anything else, or reach out directly on WhatsApp: +91 84209 66418.';
+      }
+      return 'Great question! For detailed answers, reach me on WhatsApp at +91 84209 66418 or email icodexaman@gmail.com. I reply fast! 🚀';
+    }
+
+    function toggleChat() {
+      const box = document.getElementById('cx-chat-box');
+      box.classList.toggle('open');
+      if (box.classList.contains('open')) {
+        setTimeout(() => document.getElementById('cx-chat-input').focus(), 100);
+      }
+    }
+
+    document.getElementById('cx-chat-btn').addEventListener('click', toggleChat);
+
+    function addMsg(text, type) {
+      const msgs = document.getElementById('cx-messages');
+      const div = document.createElement('div');
+      div.className = 'cx-msg ' + type;
+      div.textContent = text;
+      msgs.appendChild(div);
+      msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function sendChat() {
+      const input = document.getElementById('cx-chat-input');
+      const text = input.value.trim();
+      if (!text) return;
+      addMsg(text, 'user');
+      input.value = '';
+      document.getElementById('cx-quick-btns').style.display = 'none';
+      setTimeout(() => addMsg(getBotReply(text), 'bot'), 600);
+    }
+
+    function quickReply(text) {
+      addMsg(text, 'user');
+      document.getElementById('cx-quick-btns').style.display = 'none';
+      setTimeout(() => addMsg(getBotReply(text), 'bot'), 600);
+    }
+  </script>
+</body>
+
+</html>
