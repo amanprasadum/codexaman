@@ -1691,7 +1691,7 @@
     .ws-stage:hover .ws-track { animation-play-state: paused; }
     .ws-card {
       position: relative; margin-bottom: 1.25rem; padding: .5rem;
-      border-radius: 20px;
+      border-radius: 20px; overflow: hidden;
       background: var(--ws-glass); border: 1px solid var(--ws-glass-border);
       backdrop-filter: blur(14px) saturate(140%);
       -webkit-backdrop-filter: blur(14px) saturate(140%);
@@ -1700,11 +1700,13 @@
     }
     .ws-card img {
       display: block; width: 100%; aspect-ratio: 16/11;
-      object-fit: contain; background: #fff;
-      border-radius: 14px; transition: transform .6s ease;
+      object-fit: contain; object-position: center;
+      background: #fff; border-radius: 14px;
+      transform: scale(1.22); transform-origin: center;
+      transition: transform .6s ease;
     }
     .ws-card:hover { border-color: rgba(255,255,255,.5); }
-    .ws-card:hover img { transform: none; }
+    .ws-card:hover img { transform: scale(1.28); }
     .ws-hover {
       position: absolute; inset: .5rem;
       display: flex; align-items: center; justify-content: center;
