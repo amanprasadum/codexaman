@@ -1758,49 +1758,47 @@
       .ws-card, .ws-card img { transition: none; }
     }
 
-    /* ============ DIRECT CALL & WHATSAPP CONTACT ============ */
-    .contact-nav-link {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: .55rem .85rem; border-radius: 999px; font-size: .78rem;
-      font-weight: 650; text-decoration: none; white-space: nowrap;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .contact-nav-link:hover, .hero-contact-link:hover, .contact-float-btn:hover {
-      transform: translateY(-2px);
-    }
-    .contact-call-link { color: #171717; border: 1px solid #dedee8; background: #fff; }
-    .contact-wa-link { color: #fff; background: #16a34a; }
-    .mobile-contact-link {
-      flex: 1; display: flex; align-items: center; justify-content: center;
-      min-height: 42px; border-radius: 12px; font-size: .82rem;
-      font-weight: 650; text-decoration: none;
-    }
-    .mobile-call-link { color: #171717; background: #f4f4f5; }
-    .mobile-wa-link { color: #fff; background: #16a34a; }
+    /* ============ HERO & FOOTER CONTACT ACTIONS ============ */
     .hero-contact-link {
       display: inline-flex; align-items: center; justify-content: center;
-      min-height: 44px; padding: .7rem 1rem; border-radius: 12px;
-      color: #fff; border: 1px solid rgba(255,255,255,.28);
-      background: rgba(255,255,255,.08); text-decoration: none;
-      font-size: .88rem; font-weight: 650; transition: transform .2s ease, background .2s ease;
+      min-height: 46px; padding: .75rem 1.15rem; border-radius: 12px;
+      text-decoration: none; font-size: .88rem; font-weight: 650;
+      letter-spacing: -.01em; transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
-    .hero-whatsapp-link { background: #16a34a; border-color: #16a34a; }
-    .contact-float {
-      position: fixed; z-index: 1050; right: 22px; bottom: 92px;
-      display: flex; flex-direction: column; gap: 9px;
+    .hero-contact-link:hover { transform: translateY(-2px); }
+    .hero-call-link {
+      color: #fff; background: var(--accent); border: 1px solid var(--accent);
+      box-shadow: 0 8px 22px rgba(108,99,255,.24);
     }
-    .contact-float-btn {
+    .hero-call-link:hover { color: #fff; background: var(--accent-dark); border-color: var(--accent-dark); }
+    .hero-whatsapp-link {
+      color: #fff; background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.34);
+    }
+    .hero-whatsapp-link:hover { color: #fff; background: rgba(108,99,255,.18); border-color: rgba(255,255,255,.65); }
+    .footer-contact-actions {
+      display: flex; align-items: center; justify-content: center;
+      flex-wrap: wrap; gap: .65rem;
+    }
+    .footer-contact-btn {
       display: inline-flex; align-items: center; justify-content: center;
-      min-width: 142px; min-height: 44px; padding: .7rem 1rem;
-      border-radius: 999px; color: #fff; font-size: .82rem; font-weight: 700;
-      text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,.2);
-      transition: transform .2s ease, box-shadow .2s ease;
+      min-height: 42px; padding: .65rem 1rem; border-radius: 10px;
+      font-size: .8rem; font-weight: 650; text-decoration: none;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
     }
-    .contact-float-call { background: #171717; }
-    .contact-float-wa { background: #16a34a; }
+    .footer-contact-btn:hover { transform: translateY(-2px); }
+    .footer-call-btn {
+      color: #fff; background: var(--accent); border: 1px solid var(--accent);
+    }
+    .footer-call-btn:hover { color: #fff; background: var(--accent-dark); border-color: var(--accent-dark); }
+    .footer-whatsapp-btn {
+      color: var(--accent-dark); background: var(--accent-light);
+      border: 1px solid rgba(108,99,255,.22);
+    }
+    .footer-whatsapp-btn:hover { color: var(--accent-dark); background: #e2e0ff; border-color: rgba(108,99,255,.4); }
     @media (max-width: 575.98px) {
-      .contact-float { right: 12px; bottom: 78px; gap: 7px; }
-      .contact-float-btn { min-width: 126px; min-height: 41px; padding: .6rem .8rem; font-size: .76rem; }
+      .hero-contact-link { flex: 1 1 auto; min-width: 145px; }
+      .footer-contact-btn { flex: 1 1 145px; }
     }
 
     @keyframes ws-pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(3); opacity: 0; } }
