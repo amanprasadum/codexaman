@@ -1700,10 +1700,11 @@
     }
     .ws-card img {
       display: block; width: 100%; aspect-ratio: 16/11;
-      object-fit: cover; border-radius: 14px; transition: transform .6s ease;
+      object-fit: contain; background: #fff;
+      border-radius: 14px; transition: transform .6s ease;
     }
     .ws-card:hover { border-color: rgba(255,255,255,.5); }
-    .ws-card:hover img { transform: scale(1.04); }
+    .ws-card:hover img { transform: none; }
     .ws-hover {
       position: absolute; inset: .5rem;
       display: flex; align-items: center; justify-content: center;
