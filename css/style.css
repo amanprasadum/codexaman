@@ -1757,6 +1757,52 @@
       .ws-track, .ws-dot::after { animation: none; }
       .ws-card, .ws-card img { transition: none; }
     }
+
+    /* ============ DIRECT CALL & WHATSAPP CONTACT ============ */
+    .contact-nav-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: .55rem .85rem; border-radius: 999px; font-size: .78rem;
+      font-weight: 650; text-decoration: none; white-space: nowrap;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .contact-nav-link:hover, .hero-contact-link:hover, .contact-float-btn:hover {
+      transform: translateY(-2px);
+    }
+    .contact-call-link { color: #171717; border: 1px solid #dedee8; background: #fff; }
+    .contact-wa-link { color: #fff; background: #16a34a; }
+    .mobile-contact-link {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      min-height: 42px; border-radius: 12px; font-size: .82rem;
+      font-weight: 650; text-decoration: none;
+    }
+    .mobile-call-link { color: #171717; background: #f4f4f5; }
+    .mobile-wa-link { color: #fff; background: #16a34a; }
+    .hero-contact-link {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 44px; padding: .7rem 1rem; border-radius: 12px;
+      color: #fff; border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.08); text-decoration: none;
+      font-size: .88rem; font-weight: 650; transition: transform .2s ease, background .2s ease;
+    }
+    .hero-whatsapp-link { background: #16a34a; border-color: #16a34a; }
+    .contact-float {
+      position: fixed; z-index: 1050; right: 22px; bottom: 92px;
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .contact-float-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 142px; min-height: 44px; padding: .7rem 1rem;
+      border-radius: 999px; color: #fff; font-size: .82rem; font-weight: 700;
+      text-decoration: none; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .contact-float-call { background: #171717; }
+    .contact-float-wa { background: #16a34a; }
+    @media (max-width: 575.98px) {
+      .contact-float { right: 12px; bottom: 78px; gap: 7px; }
+      .contact-float-btn { min-width: 126px; min-height: 41px; padding: .6rem .8rem; font-size: .76rem; }
+    }
+
     @keyframes ws-pulse { from { transform: scale(1); opacity: .6; } to { transform: scale(3); opacity: 0; } }
     @keyframes ws-up   { from { transform: translateY(0); }    to { transform: translateY(-50%); } }
     @keyframes ws-down { from { transform: translateY(-50%); } to { transform: translateY(0); } }
