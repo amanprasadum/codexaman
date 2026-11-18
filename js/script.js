@@ -153,14 +153,14 @@
       heroForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(heroForm);
-        formData.append("access_key", "cf185d87-1b86-4377-88d6-6ff2e0fce031");
+        formData.set("access_key", "cf185d87-1b86-4377-88d6-6ff2e0fce031");
         const originalText = heroBtn.textContent;
         heroBtn.textContent = "Sending...";
         heroBtn.disabled = true;
         try {
           const response = await fetch("https://api.web3forms.com/submit", {method: "POST", body: formData});
           const data = await response.json();
-          if (response.ok) {
+          if (response.ok && data.success) {
             alert("Thanks! Your enquiry has been sent — our team will reply within 24 hours.");
             heroForm.reset();
           } else {
